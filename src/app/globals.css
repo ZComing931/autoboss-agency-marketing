@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-light: #242424;
+  --color-charcoal-dark: #111111;
+  --color-cream: #F5F0EB;
+  --color-cream-dark: #E8E0D8;
+  --color-copper: #C67D4A;
+  --color-copper-dark: #A8653A;
+  --color-copper-light: #D4956A;
+  --color-stone: #9A9590;
+  --color-stone-light: #B8B3AE;
+  --color-warm-white: #FAF8F5;
+  --font-display: var(--font-clash);
+  --font-body: var(--font-source);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #1A1A1A;
+  --foreground: #F5F0EB;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Editorial highlight — used for key phrases instead of gradients */
+.text-highlight {
+  color: #C67D4A;
+}
+
+/* Clean card style — no frosted glass */
+.card {
+  background: #242424;
+  border: 1px solid rgba(200, 190, 180, 0.08);
+  transition: border-color 0.3s ease;
+}
+.card:hover {
+  border-color: rgba(198, 125, 74, 0.2);
+}
+
+/* Light card for cream sections */
+.card-light {
+  background: #FFFFFF;
+  border: 1px solid rgba(26, 26, 26, 0.06);
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.04);
+}
+
+/* Pull-quote — editorial style */
+.pull-quote {
+  border-left: 3px solid #C67D4A;
+  padding-left: 1.5rem;
+  font-family: var(--font-source, Georgia, serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #F5F0EB;
+}
+
+/* Smooth accordion */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease;
+}
+.accordion-content.open {
+  grid-template-rows: 1fr;
+}
+.accordion-content > div {
+  overflow: hidden;
+}
+
+/* Reading progress bar — copper, thin */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: #C67D4A;
+  z-index: 100;
+  transition: width 100ms linear;
+}
+
+/* Subtle noise texture overlay */
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Section divider */
+.section-rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(198, 125, 74, 0.2), transparent);
 }
