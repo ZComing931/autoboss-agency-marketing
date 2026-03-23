@@ -9,10 +9,10 @@ export default function Footer() {
 
           <div className="flex gap-8">
             {[
-              { label: "The Problem", href: "/#problem" },
-              { label: "The Solution", href: "/#solution" },
-              { label: "Free Tools", href: "/resources" },
-              { label: "Pricing", href: "/#founding" },
+              { label: "The Guarantee", href: "/#guarantee" },
+              { label: "What You Get", href: "/#offer" },
+              { label: "ROI", href: "/#roi" },
+              { label: "Apply", href: "/#apply" },
               { label: "Contact", href: "mailto:hello@autoboss.io" },
             ].map((link) => (
               <a
@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
 
           <p className="text-[12px] text-stone/50">
-            &copy; {new Date().getFullYear()} AutoBoss OS
+            &copy; {new Date().getFullYear()} AutoBoss
           </p>
         </div>
       </div>

@@ -20,13 +20,13 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "AutoBoss OS — The Operating System for Contractors",
+  title: "AutoBoss — Stop Renting Leads. Start Owning Them.",
   description:
-    "Turn your contracting business from a job you own into a business that runs. AI-powered growth, operations, and automation — installed in 90 days.",
+    "Local SEO for general contractors & home service businesses. Top 3 on Google in 90 days or we work for free. $397/month — everything included.",
   openGraph: {
-    title: "AutoBoss OS — Stop Being the Bottleneck",
+    title: "AutoBoss — Stop Renting Leads. Start Owning Them.",
     description:
-      "You built a $500K job. Not a business. AutoBoss OS fixes that in 90 days.",
+      "Stop paying Angi & HomeAdvisor for shared leads. Own your leads with local SEO. Top 3 on Google in 90 days — guaranteed. $397/month.",
     type: "website",
   },
 };

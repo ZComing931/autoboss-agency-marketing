@@ -7,25 +7,25 @@ export default function StickyCTA() {
 
   useEffect(() => {
     const heroEnd = document.getElementById("hero-end");
-    const founding = document.getElementById("founding");
-    if (!heroEnd || !founding) return;
+    const apply = document.getElementById("apply");
+    if (!heroEnd || !apply) return;
 
     let pastHero = false;
-    let inFounding = false;
+    let inApply = false;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.target.id === "hero-end") pastHero = !entry.isIntersecting;
-          if (entry.target.id === "founding") inFounding = entry.isIntersecting;
+          if (entry.target.id === "apply") inApply = entry.isIntersecting;
         });
-        setVisible(pastHero && !inFounding);
+        setVisible(pastHero && !inApply);
       },
       { threshold: 0 }
     );
 
     observer.observe(heroEnd);
-    observer.observe(founding);
+    observer.observe(apply);
     return () => observer.disconnect();
   }, []);
 
@@ -37,16 +37,15 @@ export default function StickyCTA() {
     >
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
         <div className="hidden items-center gap-2 sm:flex">
-          <span className="h-1.5 w-1.5 rounded-full bg-copper animate-pulse" />
           <span className="text-[13px] text-stone">
-            Only <span className="text-cream">5</span> founding spots left
+            <span className="text-cream font-medium">$397/mo</span> — Top 3 on Google in 90 days or it&apos;s free
           </span>
         </div>
         <a
-          href="/book"
+          href="#apply"
           className="w-full rounded-sm bg-copper px-6 py-2.5 text-center text-[13px] font-medium text-white transition-colors hover:bg-copper-dark sm:w-auto"
         >
-          Book Your Founding Spot
+          Apply Now
         </a>
       </div>
     </div>

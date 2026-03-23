@@ -3,10 +3,9 @@
 import { useState } from "react";
 
 const links = [
-  { label: "The Problem", href: "/#problem" },
-  { label: "The Solution", href: "/#solution" },
-  { label: "Pricing", href: "/#founding" },
-  { label: "Free Tools", href: "/resources" },
+  { label: "The Guarantee", href: "/#guarantee" },
+  { label: "What You Get", href: "/#offer" },
+  { label: "ROI", href: "/#roi" },
 ];
 
 export default function Nav() {
@@ -35,10 +34,10 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="/book"
+            href="#apply"
             className="rounded-sm bg-copper px-5 py-2.5 text-[13px] font-medium tracking-wide text-white transition-colors hover:bg-copper-dark"
           >
-            Book Your Spot
+            Apply Now — $397/mo
           </a>
         </div>
 
@@ -67,11 +66,11 @@ export default function Nav() {
               </a>
             ))}
             <a
-              href="/#founding"
+              href="#apply"
               onClick={() => setOpen(false)}
               className="inline-block rounded-sm bg-copper px-5 py-2.5 text-center text-sm font-medium text-white"
             >
-              Book Your Spot
+              Apply Now — $397/mo
             </a>
           </div>
         </div>
