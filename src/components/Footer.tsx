@@ -11,7 +11,7 @@ export default function Footer() {
             {[
               { label: "The Guarantee", href: "/#guarantee" },
               { label: "What You Get", href: "/#offer" },
-              { label: "ROI", href: "/#roi" },
+              { label: "Free Tools", href: "/resources" },
               { label: "Apply", href: "/#apply" },
               { label: "Contact", href: "mailto:hello@autoboss.io" },
             ].map((link) => (

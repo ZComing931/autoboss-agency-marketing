@@ -6,6 +6,7 @@ const links = [
   { label: "The Guarantee", href: "/#guarantee" },
   { label: "What You Get", href: "/#offer" },
   { label: "ROI", href: "/#roi" },
+  { label: "Free Tools", href: "/resources" },
 ];
 
 export default function Nav() {

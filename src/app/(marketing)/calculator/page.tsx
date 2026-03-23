@@ -24,7 +24,7 @@ export default function CalculatorPage() {
       {/* Hero */}
       <section className="relative mx-auto max-w-3xl px-6 pt-16 pb-12 text-center">
         <p className="mb-6 text-[13px] uppercase tracking-[0.2em] text-copper">
-          Free Revenue Calculator
+          Free SEO Revenue Calculator
         </p>
         <h1
           className="text-3xl font-bold text-cream sm:text-4xl md:text-5xl"
@@ -33,7 +33,7 @@ export default function CalculatorPage() {
           How Much Revenue Is Google Sending Your Competitors Instead of You?
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-[17px] leading-[1.8] text-stone-light">
-          Enter your keywords and the cities you serve. We&apos;ll pull real
+          Enter your services and the cities you serve. We&apos;ll pull real
           search data and show you the exact dollar amount you&apos;re leaving
           on the table every month.
         </p>
@@ -77,23 +77,21 @@ export default function CalculatorPage() {
         </>
       )}
 
-      {/* Social Proof */}
+      {/* Bottom CTA */}
       <section className="relative border-t border-cream/[0.06] py-12">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <div className="grid grid-cols-3 gap-8">
-            {[
-              { value: "90-Day", label: "Complete System" },
-              { value: "7", label: "AI Agents" },
-              { value: "100%", label: "Contractor-Focused" },
-            ].map((s) => (
-              <div key={s.label}>
-                <p className="text-xl font-bold text-cream" style={{ fontFamily: "var(--font-clash)" }}>
-                  {s.value}
-                </p>
-                <p className="text-[13px] text-stone">{s.label}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-[17px] text-stone-light">
+            Ready to own those leads instead of watching competitors get them?
+          </p>
+          <a
+            href="/#apply"
+            className="mt-4 inline-flex items-center gap-2 rounded-sm bg-copper px-7 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-copper-dark"
+          >
+            Apply Now — $397/month
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </section>
     </div>
